@@ -1,4 +1,4 @@
-# Dimitra: Audio-driven diffusion model for expressive talking head generation - Supplementary Materials
+# FUCK YOU Dimitra: Audio-driven diffusion model for expressive talking head generation - Supplementary Materials
 
 This repository contains supplementary materials for Dimitra: an audio-driven diffusion model for expressive talking head generation.
 
