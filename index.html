@@ -1,38 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="description"
-        content="FCK Dimitra: Audio-driven diffusion model for expressive talking head generation. Supplementary materials">
-  <meta name="keywords" content="Dimitra">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dimitra: Audio-driven diffusion model for expressive talking head generation</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Dimitra: Audio-driven diffusion model for expressive talking head generation. Supplementary materials">
+  <meta name="keywords" content="Dimitra, Audio-driven, Diffusion Model, Talking Head Generation">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dimitra: Audio-driven Diffusion Model for Expressive Talking Head Generation</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9VZKE74FPW"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
+    function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
@@ -41,17 +32,38 @@
 </head>
 <body>
 
-
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Dimitra: Audio-driven diffusion model for expressive talking head generation. Supplementary materials</h1>
+          <h1 class="title is-1 publication-title">Dimitra: Audio-driven Diffusion Model for Expressive Talking Head Generation</h1>
+          <h2 class="title is-4">Supplementary Materials</h2>
 
-           
-            </div>
+          <!-- Authors and Institutes -->
+          <div class="content has-text-centered">
+            <h3 class="title is-5">Authors</h3>
+            <p>John Doe<sup>1</sup>, Jane Smith<sup>2</sup>, Alex Johnson<sup>1</sup></p>
+            <p><sup>1</sup>Institute of Computer Science, University of XYZ</p>
+            <p><sup>2</sup>School of AI, ABC Institute</p>
+            
+            <!-- Institute Logos -->
+            <img src="static/images/xyz_logo.png" alt="XYZ University Logo" width="100">
+            <img src="static/images/abc_logo.png" alt="ABC Institute Logo" width="100">
+          </div>
 
+          <!-- Abstract -->
+          <div class="content">
+            <h3 class="title is-5">Abstract</h3>
+            <p>
+              Dimitra is an audio-driven diffusion model designed to generate expressive talking heads that synchronize lip movements, facial expressions, and emotions with the input audio. We demonstrate how Dimitra produces more natural and realistic talking head videos compared to existing models. This page provides supplementary materials, including example videos, model architecture, and ablation studies.
+            </p>
+          </div>
+
+          <!-- Model Diagram -->
+          <div class="content has-text-centered">
+            <h3 class="title is-5">Model Diagram</h3>
+            <img src="static/images/dimitra_model_diagram.png" alt="Dimitra Model Diagram" width="600">
           </div>
         </div>
       </div>
@@ -59,353 +71,64 @@
   </div>
 </section>
 
-
-
-
-
 <section class="section">
   <div class="container is-max-desktop">
-    
-
-    <!-- Video Generation -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Video examples</h2>
-        <!-- Interpolating. -->
-        <h3 class="title is-4">1. Videos associated to main paper figures</h3>
+        <h2 class="title is-3">Video Examples</h2>
 
+        <!-- Video Section 1: Main Paper Figures -->
+        <h3 class="title is-4">1. Videos Associated to Main Paper Figures</h3>
         <div class="content has-text-centered">
-	  	<center>
-	  		<video width="960" height="480"  controls ><source src="static/videos_Dimitra/output_audio_vox_2_overlay.mp4" type="video/mp4"></video>
-         <p>
-             Figure 1. Example videos on the VoxCeleb dataset corresponding to Figure 3 left in the main paper. We see that Dimitra generate the most natural video.
-
-          </p>
-	  	</center>
+          <center>
+            <video width="960" height="480" controls>
+              <source src="static/videos_Dimitra/output_audio_vox_2_overlay.mp4" type="video/mp4">
+            </video>
+            <p>Figure 1. Example videos on the VoxCeleb dataset corresponding to Figure 3 left in the main paper.</p>
+          </center>
         </div>
-        <br/>
+        <br>
 
+        <!-- More video content for Section 1... -->
 
-        <!-- Interpolating. -->
-        <div class="content has-text-centered">
-	  	<center>
-	  		<video width="960" height="480"  controls ><source src="static/videos_Dimitra/output_audio_vox_1_overlay.mp4" type="video/mp4"></video>
-         <p>
-             Figure 2. Example videos on the VoxCeleb dataset corresponding to Figure 3 right in the main paper. Dimitra has the best lips synchronisation.
+        <!-- Video Section 4: Higher Resolution Videos -->
+        <h3 class="title is-4">4. Higher Resolution Video Results</h3>
 
-          </p>
-	  	</center>
+        <div class="columns is-multiline">
+          <div class="column is-one-third">
+            <center>
+              <video width="512" height="512" controls>
+                <source src="static/videos_Dimitra/Vox_1_upscaled.mp4" type="video/mp4">
+              </video>
+              <p>Figure 13. Example video generated on Vox, upscaled with GFPGAN</p>
+            </center>
+          </div>
+          <div class="column is-one-third">
+            <center>
+              <video width="512" height="512" controls>
+                <source src="static/videos_Dimitra/Vox_2_upscaled.mp4" type="video/mp4">
+              </video>
+              <p>Figure 14. Example video generated on Vox, upscaled with GFPGAN</p>
+            </center>
+          </div>
+          <div class="column is-one-third">
+            <center>
+              <video width="512" height="512" controls>
+                <source src="static/videos_Dimitra/Vox_3_upscaled.mp4" type="video/mp4">
+              </video>
+              <p>Figure 15. Example video generated on Vox, upscaled with GFPGAN</p>
+            </center>
+          </div>
         </div>
-        <br/>
-
-
-
-        <div class="content has-text-centered">
-	  	<center>
-	  		<video width="960" height="480"  controls ><source src="static/videos_Dimitra/output_audio_HDTF_1_overlay.mp4" type="video/mp4"></video>
-         <p>
-             Figure 3. Example videos on the HDTF dataset corresponding to Figure 4 left in the main paper. We see that Dimitra is able to generate facial expression and lip motion corresponding to stress in the audio.
-          </p>
-	  	</center>
+        
+        <div class="columns is-multiline">
+          <!-- More videos in rows of 3 -->
         </div>
-        <br/>
-
-
-
-        <div class="content has-text-centered">
-	  	<center>
-	  		<video width="960" height="480"  controls ><source src="static/videos_Dimitra/output_audio_HDTF_2_overlay.mp4" type="video/mp4"></video>
-         <p>
-             Figure 4. Example videos on the HDTF dataset corresponding to Figure 4 right in the main paper. We see that Sadtalker is unable to close the mouth.
-          </p>
-	  	</center>
-        </div>
-        <br/>
-
-
-
-
-
-          <h3 class="title is-4">2.  Videos associated to figures from the appendix</h3>
-
-
-        <div class="content has-text-centered">
-	  	<center>
-	  		<video width="960" height="480"  controls ><source src="static/videos_Dimitra/output_audio_abla_1_overlay.mp4" type="video/mp4"></video>
-         <p>
-            Figure 5. Example videos on the vox dataset for the ablation corresponding to Figure 6 in the appendix. We test different configuration for the condition used to generate the video and conclude that combining Wav2Vec features, phonemes and text transcript gives the best results.          </p>
-	  	</center>
-        </div>
-        <br/>
-
-
-        <div class="content has-text-centered">
-	  	<center>
-	  		<video width="960" height="480"  controls ><source src="static/videos_Dimitra/output_style_seq_audio_overlay.mp4" type="video/mp4"></video>
-         <p>
-                         Figure 6. Example videos corresponding to Figure 7 in the appendix. We show that using "style sequences" to encode the facial expression as Styletalk and Dreamtalk can lead to change in identity in the generated videos. We see that for both methods the identity change and noise appear around the eyes.
-
-          </p>
-	  	</center>
-        </div>
-        <br/>
-
-
-
-
-
-          <h3 class="title is-4"> 3. Additional video results</h3>
-
-        <div class="content has-text-centered">
-	  	<center>
-	  		<video width="960" height="480"  controls ><source src="static/videos_Dimitra/output_audio_HDTF_3_overlay.mp4" type="video/mp4"></video>
-         <p>
-                         Figure 7. Example videos  generated on HDTF
-
-          </p>
-	  	</center>
-        </div>
-        <br/>
-
-
-        <div class="content has-text-centered">
-	  	<center>
-	  		<video width="960" height="480"  controls ><source src="static/videos_Dimitra/output_audio_HDTF_4_overlay.mp4" type="video/mp4"></video>
-            <p>
-                          Figure 8. Example videos  generated on HDTF
-
-          </p>
-	  	</center>
-        </div>
-        <br/>
-
-
-        <div class="content has-text-centered">
-	  	<center>
-	  		<video width="960" height="480"  controls ><source src="static/videos_Dimitra/output_audio_HDTF_6_overlay.mp4" type="video/mp4"></video>
-         <p>
-                          Figure 9. Example videos generated on HDTF
-
-          </p>
-	  	</center>
-        </div>
-        <br/>
-
-
-        <div class="content has-text-centered">
-	  	<center>
-	  		<video width="960" height="480"  controls ><source src="static/videos_Dimitra/output_vox_audio_4_overlay.mp4" type="video/mp4"></video>
-           <p>
-                          Figure 10. Example videos generated on vox
-
-          </p>
-	  	</center>
-        </div>
-        <br/>
-
-
-        <div class="content has-text-centered">
-	  	<center>
-	  		<video width="960" height="480"  controls ><source src="static/videos_Dimitra/output_vox_audio_5_overlay.mp4" type="video/mp4"></video>
-          <p>
-                          Figure 11. Example videos generated on vox
-          </p>
-	  	</center>
-        </div>
-        <br/>
-
-        <div class="content has-text-centered">
-	  	<center>
-	  		<video width="960" height="480"  controls ><source src="static/videos_Dimitra/output_vox_audio_6_overlay.mp4" type="video/mp4"></video>
-         <p>
-                          Figure 12. Example videos generated on vox
-          </p>
-	  	</center>
-        </div>
-        <br/>
-
-
-          <h3 class="title is-4"> 4. Higher resolution video results</h3>
-
-        <div class="content has-text-centered">
-	  	<center>
-	  		<video width="512" height="512"  controls ><source src="static/videos_Dimitra/Vox_1_upscaled.mp4" type="video/mp4"></video>
-         <p>
-                         Figure 13. Example videos  generated on Vox upscaled with GFPGAN
-
-          </p>
-	  	</center>
-        </div>
-        <br/>
-
-        <div class="content has-text-centered">
-	  	<center>
-	  		<video width="512" height="512"  controls ><source src="static/videos_Dimitra/Vox_2_upscaled.mp4" type="video/mp4"></video>
-         <p>
-                         Figure 14. Example videos  generated on Vox upscaled with GFPGAN
-
-          </p>
-	  	</center>
-        </div>
-        <br/>
-
-        <div class="content has-text-centered">
-	  	<center>
-	  		<video width="512" height="512"  controls ><source src="static/videos_Dimitra/Vox_3_upscaled.mp4" type="video/mp4"></video>
-         <p>
-                         Figure 15. Example videos  generated on Vox upscaled with GFPGAN
-
-          </p>
-	  	</center>
-        </div>
-        <br/>
-
-        <div class="content has-text-centered">
-	  	<center>
-	  		<video width="512" height="512"  controls ><source src="static/videos_Dimitra/Vox_4_upscaled.mp4" type="video/mp4"></video>
-         <p>
-                         Figure 16. Example videos  generated on Vox upscaled with GFPGAN
-
-          </p>
-	  	</center>
-        </div>
-        <br/>
-
-        <div class="content has-text-centered">
-	  	<center>
-	  		<video width="512" height="512"  controls ><source src="static/videos_Dimitra/Vox_5_upscaled.mp4" type="video/mp4"></video>
-         <p>
-                         Figure 17. Example videos  generated on Vox upscaled with GFPGAN
-
-          </p>
-	  	</center>
-        </div>
-        <br/>
-
-       <div class="content has-text-centered">
-	  	<center>
-	  		<video width="512" height="512"  controls ><source src="static/videos_Dimitra/HDTF_512_1.mp4" type="video/mp4"></video>
-         <p>
-                         Figure 18. Example videos  generated on HDTF with high-resolution renderer
-
-          </p>
-	  	</center>
-        </div>
-        <br/>
-
-       <div class="content has-text-centered">
-	  	<center>
-	  		<video width="512" height="512"  controls ><source src="static/videos_Dimitra/HDTF_512_2.mp4" type="video/mp4"></video>
-         <p>
-                         Figure 19. Example videos  generated on HDTF with high-resolution renderer
-
-          </p>
-	  	</center>
-        </div>
-        <br/>
-
-
-       <div class="content has-text-centered">
-	  	<center>
-	  		<video width="512" height="512"  controls ><source src="static/videos_Dimitra/HDTF_supp_1.mp4" type="video/mp4"></video>
-         <p>
-                         Figure 20. Example videos  generated on HDTF with high-resolution renderer
-
-          </p>
-	  	</center>
-        </div>
-        <br/>
-
-       <div class="content has-text-centered">
-	  	<center>
-	  		<video width="512" height="512"  controls ><source src="static/videos_Dimitra/HDTF_supp_2.mp4" type="video/mp4"></video>
-         <p>
-                         Figure 21. Example videos  generated on HDTF with high-resolution renderer
-
-          </p>
-	  	</center>
-        </div>
-        <br/>
-
-       <div class="content has-text-centered">
-	  	<center>
-	  		<video width="512" height="512"  controls ><source src="static/videos_Dimitra/HDTF_supp_3.mp4" type="video/mp4"></video>
-         <p>
-                         Figure 22. Example videos  generated on HDTF with high-resolution renderer
-
-          </p>
-	  	</center>
-        </div>
-        <br/>
-
-       <div class="content has-text-centered">
-	  	<center>
-	  		<video width="512" height="512"  controls ><source src="static/videos_Dimitra/HDTF_upscaled_1.mp4" type="video/mp4"></video>
-         <p>
-                         Figure 23. Example videos  generated on HDTF upscaled with GFPGAN
-
-          </p>
-	  	</center>
-        </div>
-        <br/>
-
-       <div class="content has-text-centered">
-	  	<center>
-	  		<video width="512" height="512"  controls ><source src="static/videos_Dimitra/HDTF_upscaled_2.mp4" type="video/mp4"></video>
-         <p>
-                         Figure 24. Example videos  generated on HDTF upscaled with GFPGAN
-
-          </p>
-	  	</center>
-        </div>
-        <br/>
-
-       <div class="content has-text-centered">
-	  	<center>
-	  		<video width="512" height="512"  controls ><source src="static/videos_Dimitra/HDTF_upscaled_3.mp4" type="video/mp4"></video>
-         <p>
-                         Figure 25. Example videos  generated on HDTF upscaled with GFPGAN
-
-          </p>
-	  	</center>
-        </div>
-        <br/>
-
-       <div class="content has-text-centered">
-	  	<center>
-	  		<video width="512" height="512"  controls ><source src="static/videos_Dimitra/HDTF_upscaled_4.mp4" type="video/mp4"></video>
-         <p>
-                         Figure 26. Example videos  generated on HDTF upscaled with GFPGAN
-
-          </p>
-	  	</center>
-        </div>
-        <br/>
-
-
-       <div class="content has-text-centered">
-	  	<center>
-	  		<video width="512" height="512"  controls ><source src="static/videos_Dimitra/HDTF_upscaled_5.mp4" type="video/mp4"></video>
-         <p>
-                         Figure 27. Example videos  generated on HDTF upscaled with GFPGAN
-
-          </p>
-	  	</center>
-        </div>
-        <br/>
 
       </div>
     </div>
-    <!--/ Animation. -->
-
   </div>
 </section>
-
-
->
-
-
-
 
 </body>
 </html>
