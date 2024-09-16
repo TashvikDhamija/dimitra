@@ -89,6 +89,68 @@
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Video examples</h2>
+
+
+ <h3 class="title is-4">4. High resolution video results</h3>
+
+        <div class="content">
+            <div class="video-row">
+                <div class="video-item">
+                    <video width="512" height="512" controls>
+                        <source src="static/videos_Dimitra/Vox_1_upscaled.mp4" type="video/mp4">
+                    </video>
+                    <p> Example videos generated on Vox upscaled with GFPGAN</p>
+                </div>
+                
+                <div class="video-item">
+                    <video width="512" height="512" controls>
+                        <source src="static/videos_Dimitra/Vox_3_upscaled.mp4" type="video/mp4">
+                    </video>
+                    <p> Example videos generated on Vox upscaled with GFPGAN</p>
+                </div>
+	    	   <div class="video-item">
+                    <video width="512" height="512" controls>
+                        <source src="static/videos_Dimitra/Vox_4_upscaled.mp4" type="video/mp4">
+                    </video>
+                    <p> Example videos generated on Vox upscaled with GFPGAN</p>
+                </div>
+            </div>
+        
+            <div class="video-row">
+                <div class="video-item">
+                    <video width="512" height="512" controls>
+                        <source src="static/videos_Dimitra/HDTF_512_2.mp4" type="video/mp4">
+                    </video>
+                    <p>Figure 19. Example videos generated on HDTF with high-resolution renderer</p>
+                </div>
+                <div class="video-item">
+                    <video width="512" height="512" controls>
+                        <source src="static/videos_Dimitra/HDTF_supp_1.mp4" type="video/mp4">
+                    </video>
+                    <p>Figure 20. Example videos generated on HDTF with high-resolution renderer</p>
+                </div>
+                <div class="video-item">
+                    <video width="512" height="512" controls>
+                        <source src="static/videos_Dimitra/HDTF_supp_2.mp4" type="video/mp4">
+                    </video>
+                    <p>Figure 21. Example videos generated on HDTF with high-resolution renderer</p>
+                </div>
+            </div>
+        </div>
+        
+        <style>
+            .video-row {
+                display: flex;
+                justify-content: space-around;
+                margin-bottom: 20px;
+            }
+            .video-item {
+                text-align: center;
+                margin: 0 10px;
+            }
+        </style>
+
+	      
         <!-- Interpolating. -->
         <h3 class="title is-4">1. Videos associated to main paper figures</h3>
 
@@ -139,37 +201,6 @@
 	  	</center>
         </div>
         <br/>
-
-
-
-
-
-          <h3 class="title is-4">2.  Videos associated to figures from the appendix</h3>
-
-
-        <div class="content has-text-centered">
-	  	<center>
-	  		<video width="960" height="480"  controls ><source src="static/videos_Dimitra/output_audio_abla_1_overlay.mp4" type="video/mp4"></video>
-         <p>
-            Figure 5. Example videos on the vox dataset for the ablation corresponding to Figure 6 in the appendix. We test different configuration for the condition used to generate the video and conclude that combining Wav2Vec features, phonemes and text transcript gives the best results.          </p>
-	  	</center>
-        </div>
-        <br/>
-
-
-        <div class="content has-text-centered">
-	  	<center>
-	  		<video width="960" height="480"  controls ><source src="static/videos_Dimitra/output_style_seq_audio_overlay.mp4" type="video/mp4"></video>
-         <p>
-                         Figure 6. Example videos corresponding to Figure 7 in the appendix. We show that using "style sequences" to encode the facial expression as Styletalk and Dreamtalk can lead to change in identity in the generated videos. We see that for both methods the identity change and noise appear around the eyes.
-
-          </p>
-	  	</center>
-        </div>
-        <br/>
-
-
-
 
 
           <h3 class="title is-4"> 3. Additional video results</h3>
@@ -243,126 +274,7 @@
         <br/>
 
 
-        <h3 class="title is-4">4. Higher resolution video results</h3>
-
-        <div class="content">
-            <div class="video-row">
-                <div class="video-item">
-                    <video width="512" height="512" controls>
-                        <source src="static/videos_Dimitra/Vox_1_upscaled.mp4" type="video/mp4">
-                    </video>
-                    <p>Figure 13. Example videos generated on Vox upscaled with GFPGAN</p>
-                </div>
-                <div class="video-item">
-                    <video width="512" height="512" controls>
-                        <source src="static/videos_Dimitra/Vox_2_upscaled.mp4" type="video/mp4">
-                    </video>
-                    <p>Figure 14. Example videos generated on Vox upscaled with GFPGAN</p>
-                </div>
-                <div class="video-item">
-                    <video width="512" height="512" controls>
-                        <source src="static/videos_Dimitra/Vox_3_upscaled.mp4" type="video/mp4">
-                    </video>
-                    <p>Figure 15. Example videos generated on Vox upscaled with GFPGAN</p>
-                </div>
-            </div>
-        
-            <div class="video-row">
-                <div class="video-item">
-                    <video width="512" height="512" controls>
-                        <source src="static/videos_Dimitra/Vox_4_upscaled.mp4" type="video/mp4">
-                    </video>
-                    <p>Figure 16. Example videos generated on Vox upscaled with GFPGAN</p>
-                </div>
-                <div class="video-item">
-                    <video width="512" height="512" controls>
-                        <source src="static/videos_Dimitra/Vox_5_upscaled.mp4" type="video/mp4">
-                    </video>
-                    <p>Figure 17. Example videos generated on Vox upscaled with GFPGAN</p>
-                </div>
-                <div class="video-item">
-                    <video width="512" height="512" controls>
-                        <source src="static/videos_Dimitra/HDTF_512_1.mp4" type="video/mp4">
-                    </video>
-                    <p>Figure 18. Example videos generated on HDTF with high-resolution renderer</p>
-                </div>
-            </div>
-        
-            <div class="video-row">
-                <div class="video-item">
-                    <video width="512" height="512" controls>
-                        <source src="static/videos_Dimitra/HDTF_512_2.mp4" type="video/mp4">
-                    </video>
-                    <p>Figure 19. Example videos generated on HDTF with high-resolution renderer</p>
-                </div>
-                <div class="video-item">
-                    <video width="512" height="512" controls>
-                        <source src="static/videos_Dimitra/HDTF_supp_1.mp4" type="video/mp4">
-                    </video>
-                    <p>Figure 20. Example videos generated on HDTF with high-resolution renderer</p>
-                </div>
-                <div class="video-item">
-                    <video width="512" height="512" controls>
-                        <source src="static/videos_Dimitra/HDTF_supp_2.mp4" type="video/mp4">
-                    </video>
-                    <p>Figure 21. Example videos generated on HDTF with high-resolution renderer</p>
-                </div>
-            </div>
-        
-            <div class="video-row">
-                <div class="video-item">
-                    <video width="512" height="512" controls>
-                        <source src="static/videos_Dimitra/HDTF_supp_3.mp4" type="video/mp4">
-                    </video>
-                    <p>Figure 22. Example videos generated on HDTF with high-resolution renderer</p>
-                </div>
-                <div class="video-item">
-                    <video width="512" height="512" controls>
-                        <source src="static/videos_Dimitra/HDTF_upscaled_1.mp4" type="video/mp4">
-                    </video>
-                    <p>Figure 23. Example videos generated on HDTF upscaled with GFPGAN</p>
-                </div>
-                <div class="video-item">
-                    <video width="512" height="512" controls>
-                        <source src="static/videos_Dimitra/HDTF_upscaled_2.mp4" type="video/mp4">
-                    </video>
-                    <p>Figure 24. Example videos generated on HDTF upscaled with GFPGAN</p>
-                </div>
-            </div>
-        
-            <div class="video-row">
-                <div class="video-item">
-                    <video width="512" height="512" controls>
-                        <source src="static/videos_Dimitra/HDTF_upscaled_3.mp4" type="video/mp4">
-                    </video>
-                    <p>Figure 25. Example videos generated on HDTF upscaled with GFPGAN</p>
-                </div>
-                <div class="video-item">
-                    <video width="512" height="512" controls>
-                        <source src="static/videos_Dimitra/HDTF_upscaled_4.mp4" type="video/mp4">
-                    </video>
-                    <p>Figure 26. Example videos generated on HDTF upscaled with GFPGAN</p>
-                </div>
-                <div class="video-item">
-                    <video width="512" height="512" controls>
-                        <source src="static/videos_Dimitra/HDTF_upscaled_5.mp4" type="video/mp4">
-                    </video>
-                    <p>Figure 27. Example videos generated on HDTF upscaled with GFPGAN</p>
-                </div>
-            </div>
-        </div>
-        
-        <style>
-            .video-row {
-                display: flex;
-                justify-content: space-around;
-                margin-bottom: 20px;
-            }
-            .video-item {
-                text-align: center;
-                margin: 0 10px;
-            }
-        </style>
+       
         
 
   </div>
