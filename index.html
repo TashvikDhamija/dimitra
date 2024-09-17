@@ -52,6 +52,35 @@
               <img src="static/images/inria.png" alt="Institute 1 Logo" width="350">
             </div>
           </div>
+	<style>
+	  .custom-button {
+	    background-color: #b5b5b5; /* Grey color */
+	    color: white; /* White text */
+	    border: none; /* No border */
+	    border-radius: 30px; /* Oval shape */
+	    padding: 10px 30px; /* Padding for button size */
+	    font-size: 16px;
+	    cursor: pointer;
+	  }
+	
+	  .custom-button:hover {
+	    background-color: #9a9a9a; /* Darker grey on hover */
+	  }
+	</style>
+	
+	<!-- Buttons -->
+	<div class="columns is-centered">
+	  <div class="column has-text-centered">
+	    <button class="custom-button" onclick="window.open('https://arxiv.org', '_blank')">Link to Arxiv</button>
+	  </div>
+	  <div class="column has-text-centered">
+	    <button class="custom-button" onclick="window.open('https://example.com/pdf', '_blank')">Link to PDF</button>
+	  </div>
+	  <div class="column has-text-centered">
+	    <button class="custom-button" onclick="alert('Coming Soon!')">Link to GitHub</button>
+	  </div>
+	</div>
+
 
           <!-- Abstract -->
           <div class="abstract">
