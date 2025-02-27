@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Dimitra: Audio-driven diffusion model for expressive talking head generation.">
+  <meta name="description" content="AI killed the video star">
   <meta name="keywords" content="Dimitra">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AI killed the video star</title>
@@ -39,7 +39,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Dimitra: Audio-driven diffusion model for expressive talking head generation</h1>
+          <h1 class="title is-1 publication-title">AI killed the video star</h1>
           
           <!-- Authors -->
           <div class="authors">
@@ -86,7 +86,7 @@
           <div class="abstract">
             <h2 class="title is-3">Abstract</h2>
             <p>
-              We propose Dimitra, a novel framework for audio-driven talking head generation, streamlined to learn lip motion, facial expression, as well as head pose motion. Specifically, we train a conditional Motion Diffusion Transformer (cMDT) by modeling facial motion sequences with 3D representation. We condition the cMDT with only two input signals, an audio-sequence, as well as a reference facial image. By extracting additional features directly from audio, Dimitra is able to increase quality and realism of generated videos. In particular, phoneme sequences contribute to the realism of lip motion, whereas text transcript to facial expression and head pose realism. Quantitative and qualitative experiments on two widely employed datasets, VoxCeleb2 and HDTF, showcase that Dimitra is able to outperform existing approaches for generating realistic talking heads imparting lip motion, facial expression, and head pose. 
+              We propose Dimitra++, a novel framework for audio-driven talking head generation, streamlined to learn lip motion, facial expression, as well as head pose motion. Specifically, we train a conditional Motion Diffusion Transformer (cMDT) by modeling facial motion sequences with 3D representation. We condition the cMDT with only two input signals, an audio-sequence, as well as a reference facial image. Quantitative and qualitative experiments on two widely employed datasets, VoxCeleb2 and CelebV-HQ, showcase that Dimitra++ is able to outperform existing approaches for generating realistic talking heads imparting lip motion, facial expression, and head pose. 
             </p>
           </div>
 
@@ -120,49 +120,49 @@
         <h2 class="title is-3">Video examples</h2>
 
 
- <h3 class="title is-4">1. High resolution video results</h3>
+ <h3 class="title is-4">1. High resolution Dimitra++ generated samples</h3>
 
         <div class="content">
             <div class="video-row">
                 <div class="video-item">
                     <video width="512" height="512" controls>
-                        <source src="static/videos_Dimitra/Vox_1_upscaled.mp4" type="video/mp4">
+                        <source src="static/videos_Dimitra/CVHQ_27.mp4" type="video/mp4">
                     </video>
-                    <p> Example videos generated on Vox upscaled with GFPGAN</p>
+                    <p> Example videos generated on CelebV-HQ</p>
                 </div>
                 
                 <div class="video-item">
                     <video width="512" height="512" controls>
-                        <source src="static/videos_Dimitra/Vox_3_upscaled.mp4" type="video/mp4">
+                        <source src="static/videos_Dimitra/CVHQ_13.mp4" type="video/mp4">
                     </video>
-                    <p> Example videos generated on Vox upscaled with GFPGAN</p>
+                    <p> Example videos generated on CelebV-HQ</p>
                 </div>
 	    	   <div class="video-item">
                     <video width="512" height="512" controls>
-                        <source src="static/videos_Dimitra/Vox_4_upscaled.mp4" type="video/mp4">
+                        <source src="static/videos_Dimitra/CVHQ_21.mp4" type="video/mp4">
                     </video>
-                    <p> Example videos generated on Vox upscaled with GFPGAN</p>
+                    <p> Example videos generated on CelebV-HQ</p>
                 </div>
             </div>
         
             <div class="video-row">
                 <div class="video-item">
                     <video width="512" height="512" controls>
-                        <source src="static/videos_Dimitra/HDTF_512_2.mp4" type="video/mp4">
+                        <source src="static/videos_Dimitra/VOX_11.mp4" type="video/mp4">
                     </video>
-                    <p>Example videos generated on HDTF with high-resolution renderer</p>
+                    <p>Example videos generated on VoxCeleb2</p>
                 </div>
                 <div class="video-item">
                     <video width="512" height="512" controls>
-                        <source src="static/videos_Dimitra/HDTF_supp_1.mp4" type="video/mp4">
+                        <source src="static/videos_Dimitra/VOX_18.mp4" type="video/mp4">
                     </video>
-                    <p>Example videos generated on HDTF with high-resolution renderer</p>
+                    <p>Example videos generated on VoxCeleb2</p>
                 </div>
                 <div class="video-item">
                     <video width="512" height="512" controls>
-                        <source src="static/videos_Dimitra/HDTF_supp_2.mp4" type="video/mp4">
+                        <source src="static/videos_Dimitra/VOX_21.mp4" type="video/mp4">
                     </video>
-                    <p>Example videos generated on HDTF with high-resolution renderer</p>
+                    <p>Example videos generated on VoxCeleb2</p>
                 </div>
             </div>
         </div>
@@ -179,13 +179,57 @@
             }
         </style>
 
+        <h3 class="title is-4">2. Comparison with open source methods (video obtained using the method code)</h3>
 
+        <div class="content has-text-centered">
+	  	<center>
+	  		<video width="1536" height="1536"  controls ><source src="static/videos_Dimitra/CVHQ_25.mp4" type="video/mp4"></video>
+         <p>
+             Example videos on the CelebV-HQ dataset.
+          </p>
+	  	</center>
+        </div>
+        <br/>
 
-	 <h3 class="title is-4">2. Comparison against recent methods (video obtained from the methods website)</h3>
+        <div class="content has-text-centered">
+	  	<center>
+	  		<video width="1536" height="1536"  controls ><source src="static/videos_Dimitra/CVHQ_6.mp4" type="video/mp4"></video>
+         <p>
+              Example videos on the CelebV-HQ dataset.
+
+          </p>
+	  	</center>
+    </div>
+    <br/>
+    <div class="content has-text-centered">
+
+    <center>
+      <video width="1536" height="1536"  controls ><source src="static/videos_Dimitra/VOX_23.mp4" type="video/mp4"></video>
+       <p>
+           Example videos on the VoxCeleb2 dataset.
+
+        </p>
+    </center>
+      </div>
+      <br/>
+      <div class="content has-text-centered">
+
+	  	<center>
+	  		<video width="1536" height="1536"  controls ><source src="static/videos_Dimitra/VOX_20.mp4" type="video/mp4"></video>
+         <p>
+             Example videos on the VoxCeleb2 dataset. Despite being trained only on english language data, Dimitra++ can generate realistic videos for other languages.
+
+          </p>
+	  	</center>
+        </div>
+        <br/>
+        <div class="content has-text-centered">
+
+	 <h3 class="title is-4">3. Comparison against recent closed source methods (video taken from the methods website)</h3>
 
 	  <div class="content has-text-centered">
 	  	<center>
-	  		<video width="960" height="480"  controls ><source src="static/videos_Dimitra/EMOPORTRAIT_new.webm" type="video/webm"></video>
+	  		<video width="1024" height="512"  controls ><source src="static/videos_Dimitra/EMOPortrait_compare.mp4" type="video/webm"></video>
          <p>
              Dimitra (left) VS EMOPortrait (right) .
 
@@ -196,18 +240,7 @@
 
 	  <div class="content has-text-centered">
 	  	<center>
-	  		<video width="960" height="480"  controls ><source src="static/videos_Dimitra/VASA_new.mp4" type="video/mp4"></video>
-         <p>
-             Dimitra (left) VS VASA (right) .
-
-          </p>
-	  	</center>
-        </div>
-        <br/>
-
-	  <div class="content has-text-centered">
-	  	<center>
-	  		<video width="960" height="480"  controls ><source src="static/videos_Dimitra/EMO_new.mp4" type="video/mp4"></video>
+	  		<video width="1024" height="512"  controls ><source src="static/videos_Dimitra/EMO_compare.mp4" type="video/mp4"></video>
          <p>
              Dimitra (left) VS EMO (right) .
 
@@ -216,46 +249,12 @@
         </div>
         <br/>
 
-        <!-- Interpolating. -->
-        <h3 class="title is-4">1. Comparison with other methods (video obtained using the method code)</h3>
-
-        <div class="content has-text-centered">
+	  <div class="content has-text-centered">
 	  	<center>
-	  		<video width="960" height="480"  controls ><source src="static/videos_Dimitra/output_audio_vox_2_overlay.mp4" type="video/mp4"></video>
+	  		<video width="1024" height="512"  controls ><source src="static/videos_Dimitra/VASA_compare.mp4" type="video/mp4"></video>
          <p>
-             Example videos on the VoxCeleb dataset .
+             Dimitra (left) VS VASA (right) .
 
-          </p>
-	  	</center>
-        </div>
-        <br/>
-
-        <div class="content has-text-centered">
-	  	<center>
-	  		<video width="960" height="480"  controls ><source src="static/videos_Dimitra/output_audio_HDTF_1_overlay.mp4" type="video/mp4"></video>
-         <p>
-             Example videos on the HDTF dataset.
-          </p>
-	  	</center>
-        </div>
-        <br/>
-
-        <div class="content has-text-centered">
-	  	<center>
-	  		<video width="960" height="480"  controls ><source src="static/videos_Dimitra/output_audio_HDTF_6_overlay.mp4" type="video/mp4"></video>
-         <p>
-                          Example videos generated on HDTF
-
-          </p>
-	  	</center>
-        </div>
-        <br/>
-
-        <div class="content has-text-centered">
-	  	<center>
-	  		<video width="960" height="480"  controls ><source src="static/videos_Dimitra/output_vox_audio_5_overlay.mp4" type="video/mp4"></video>
-          <p>
-                          Example videos generated on vox
           </p>
 	  	</center>
         </div>
