@@ -66,7 +66,7 @@ This support the same configuration as above (in sevreal subdirectories) in addi
 - more than 1 .png and 1.wav file (several identity same audio)
 - more than 1 .png and 1.mp4 file (several identity same audio)
 
-## Installation
+## Acknowledgement
 This code reuse code or part of code provided by:
 
 3DMM extraction:
@@ -79,3 +79,14 @@ Video renderer:
 Artifact removing:
 [https://github.com/wzhouxiff/RestoreFormerPlusPlus](https://github.com/wzhouxiff/RestoreFormerPlusPlus)
 
+## References
+
+If you use our code please cite:
+```bash
+@article{chopin2025dimitra,
+  title={Dimitra: Audio-driven Diffusion model for Expressive Talking Head Generation},
+  author={Chopin, Baptiste and Dhamija, Tashvik and Balaji, Pranav and Wang, Yaohui and Dantcheva, Antitza},
+  journal={arXiv preprint arXiv:2502.17198},
+  year={2025}
+}
+```
