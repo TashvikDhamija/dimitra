@@ -62,5 +62,20 @@ This support the same configuration as above (in sevreal subdirectories) in addi
 - more than 1 .mp4 and 1.png file (several audio same identity)
 - more than 1 .wav and 1.png file (several audio same identity)
 - more than 1 .wav and 1.mp4 file (several audio same identity)
-- more than 1 .wav and 1.mp4 file (several audio same identity)
+- more than 1 .mp4 and 1.wav file (several identity same audio)
+- more than 1 .png and 1.wav file (several identity same audio)
+- more than 1 .png and 1.mp4 file (several identity same audio)
+
+## Installation
+This code reuse code or part of code provided by:
+
+3DMM extraction:
+[https://github.com/sicxu/Deep3DFaceRecon_pytorch](https://github.com/sicxu/Deep3DFaceRecon_pytorch)
+
+Video renderer:
+[https://github.com/RenYurui/PIRender](https://github.com/RenYurui/PIRender)
+[https://github.com/FuxiVirtualHuman/styletalk](https://github.com/FuxiVirtualHuman/styletalk)
+
+Artifact removing:
+[https://github.com/wzhouxiff/RestoreFormerPlusPlus](https://github.com/wzhouxiff/RestoreFormerPlusPlus)
 
