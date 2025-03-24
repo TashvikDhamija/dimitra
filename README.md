@@ -25,6 +25,11 @@ mv degradations.py YOURVENV/lib/python3.12/site-packages/basicsr/data/
 ```
 Then download the weights from [link](to be added) an copy the content in the directory
 
+If there are issues with packages versions try:
+```bash
+pip install -r requirements_noversions.txt
+```
+
 ## Inference instructions
 
 To run a single time in 512*512 resolution use 
