@@ -4,7 +4,7 @@ The the code for the papers AI Killed the Video Star and Dimitra: Audio-driven D
 
 [Paper](http://arxiv.org/abs/2502.17198) | [Project Page](https://tashvikdhamija.github.io/dimitra/)
 
-![Project Image](static/images/model_diagram1.png)
+![Project Image](static/images/model_diagram1.jpg)
 
 
 With this code can animate face image based on an audio sequence to do talking head generation
