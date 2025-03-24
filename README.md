@@ -27,7 +27,7 @@ cd ../../
 mv utils.py YOURVENV/lib/python3.12/site-packages/realesrgan/
 mv degradations.py YOURVENV/lib/python3.12/site-packages/basicsr/data/
 ```
-Then download the weights from [link](to be added) an copy the content in the directory
+Then download the weights from [link](https://drive.google.com/drive/folders/1s48upUFKcO1iVe83tiUNgDe2k0oPeHfZ?usp=sharing) an copy the content in the directory
 
 If there are issues with packages versions try:
 ```bash
@@ -74,6 +74,11 @@ This support the same configuration as above (in sevreal subdirectories) in addi
 - more than 1 .mp4 and 1.wav file (several identity same audio)
 - more than 1 .png and 1.wav file (several identity same audio)
 - more than 1 .png and 1.mp4 file (several identity same audio)
+
+
+## Training instructions
+Training code coming soon
+
 
 ## Acknowledgement
 This code reuse code or part of code provided by:
