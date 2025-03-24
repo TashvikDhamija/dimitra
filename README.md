@@ -1,9 +1,13 @@
 # AI Killed the Video Star
 
+The the code for the papers AI Killed the Video Star and Dimitra: Audio-driven Diffusion model for Expressive Talking Head Generation
+
 [Paper](http://arxiv.org/abs/2502.17198) | [Project Page](https://tashvikdhamija.github.io/dimitra/)
 
 ![Project Image](static/images/model_diagram1.png)
 
+
+With this code can animate face image based on an audio sequence to do talking head generation
 
 ---
 
