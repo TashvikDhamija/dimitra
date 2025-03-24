@@ -20,4 +20,47 @@ git clone -b 0.3.0 https://github.com/NVlabs/nvdiffrast
 cd nvdiffrast
 pip install .
 cd ../../
+mv utils.py YOURVENV/lib/python3.12/site-packages/realesrgan/
+mv degradations.py YOURVENV/lib/python3.12/site-packages/basicsr/data/
+```
+Then download the weights from [link](to be added) an copy the content in the directory
+
+## Inference instructions
+
+To run a single time in 512*512 resolution use 
+
+```bash
+python scripts/run_single.py --input_dir INPUTDIR --output_dir OUTPUTDIR
+```
+
+To run a single time in 256*256 resolution use 
+
+```bash
+python scripts/run_single.py --input_dir INPUTDIR --output_dir OUTPUTDIR --res 256
+```
+To run a single time and clean the output video from artifacts (slower that normal generation) use
+
+```bash
+python scripts/run_single.py --input_dir INPUTDIR --output_dir OUTPUTDIR --remove_artifacts
+```
+
+The results will be saved in the directory you choose as Dimitra_output.mp4 (and Dimitra_output_cleaned.mp4 if removing artifacts)
+In the input directory the following configuration are valid:
+- 1 .mp4 file (video recontruction from the audio)
+- 2 .mp4 files (the first aphabeticaly will be used for identity and teh second for audio)
+- 1 .png file and 1 .wav file
+- 1 .mp4 file and 1 .wav file
+- 1 .png file and 1 .mp4 file
+
+To run inference on multiple video use (options are the same as above)
+```bash
+python scripts/run_multi.py --input_dir INPUTDIR --output_dir OUTPUTDIR
+```
+The output directory will have the same structure as the input directory.
+This support the same configuration as above (in sevreal subdirectories) in addition to the following one:
+- more than 2 .mp4 file (reconstruction for entire dataset)
+- more than 1 .mp4 and 1.png file (several audio same identity)
+- more than 1 .wav and 1.png file (several audio same identity)
+- more than 1 .wav and 1.mp4 file (several audio same identity)
+- more than 1 .wav and 1.mp4 file (several audio same identity)
 
