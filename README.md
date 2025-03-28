@@ -47,6 +47,12 @@ To run a single time in 256*256 resolution use
 ```bash
 python scripts/run_single.py --input_dir INPUTDIR --output_dir OUTPUTDIR --res 256
 ```
+To run a single time with VoxCeleb style of cropping (i.e. missing the top of the head) run
+
+```bash
+python scripts/run_single.py --input_dir INPUTDIR --output_dir OUTPUTDIR --res 256 --vox
+```
+
 To run a single time and clean the output video from artifacts (slower that normal generation) use
 
 ```bash
