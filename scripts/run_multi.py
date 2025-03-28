@@ -326,7 +326,13 @@ def run_single(args):
     gen_list=glob.glob(f'{args.output_dir}/**/generated.mat', recursive=True)
     for gen_mat in tqdm(gen_list, desc="Processing videos"):
         gen_dir = os.path.dirname(gen_mat)
-        if args.res=="512":
+
+        if args.res=='224':
+            os.system(f"mv {gen_dir}/ff.png {gen_dir}/ff_old.png")
+            os.system(f"ffmpeg -y -i {gen_dir}/ff_old.png -vf \"scale=256:256\" {gen_dir}/ff.png -loglevel error -hide_banner")
+            os.system(f"rm {gen_dir}/ff_old.png")
+            os.system(f"python Pirender/Pirender_inference_256_vox.py --pose_path {gen_mat} --src_img_path {gen_dir}/ff.png --wav_path {gen_dir}/audio.wav --output_path {gen_dir}/Dimitra_output.mp4")
+        elif args.res=="512":
             os.system(f"python Pirender/Pirender_inference_512.py --pose_path {gen_mat} --src_img_path {gen_dir}/ff.png --wav_path {gen_dir}/audio.wav --output_path {gen_dir}/Dimitra_output.mp4")
         else:
             os.system(f"python Pirender/Pirender_inference_256.py --pose_path {gen_mat} --src_img_path {gen_dir}/ff.png --wav_path {gen_dir}/audio.wav --output_path {gen_dir}/Dimitra_output.mp4")
@@ -341,6 +347,26 @@ def run_single(args):
         else:
             os.system(f"python RestoreFormer++/inference_loop.py --videos_path {args.output_dir} --name 01 -v RestoreFormer++ -s 2 --save")
         restore_time = time.time() - start_time
+
+
+    if not args.no_watermark:
+        #ADD watermarks
+        gen_list=glob.glob(f'{args.output_dir}/**/Dimitra_output.mp4', recursive=True)
+        for gen_mat in tqdm(gen_list, desc="Processing videos"):
+            gen_dir = os.path.dirname(gen_mat)
+            os.system(f"mv {gen_dir}/Dimitra_output.mp4 {gen_dir}/Dimitra_output_old.mp4")
+            if args.res=="512":
+                os.system(f"ffmpeg -y -i {gen_dir}/Dimitra_output_old.mp4 -i images/watermark_512.png -filter_complex \"overlay=0:0\" {gen_dir}/Dimitra_output.mp4 -loglevel error -hide_banner")
+            else:
+                os.system(f"ffmpeg -y -i {gen_dir}/Dimitra_output_old.mp4 -i images/watermark_256.png -filter_complex \"overlay=0:0\" {gen_dir}/Dimitra_output.mp4 -loglevel error -hide_banner")
+            os.system(f"rm {gen_dir}/Dimitra_output_old.mp4")
+        if args.remove_artifacts:
+            gen_list=glob.glob(f'{args.output_dir}/**/Dimitra_output_cleaned.mp4', recursive=True)
+            for gen_mat in tqdm(gen_list, desc="Processing videos"):
+                gen_dir = os.path.dirname(gen_mat)
+                os.system(f"mv {gen_dir}/Dimitra_output_cleaned.mp4 {gen_dir}/Dimitra_output_cleaned_old.mp4")
+                os.system(f"ffmpeg -y -i {gen_dir}/Dimitra_output_cleaned_old.mp4 -i images/watermark_512.png -filter_complex \"overlay=0:0\" {gen_dir}/Dimitra_output_cleaned.mp4 -loglevel error -hide_banner")
+                os.system(f"rm {gen_dir}/Dimitra_output_cleaned_old.mp4")
 
     total_time = time.time() - global_start_time
 
@@ -360,8 +386,14 @@ def main():
     parser.add_argument("--input_dir", type=str, default='input_multi')
     parser.add_argument("--output_dir", type=str, default='output_multi')
     parser.add_argument("--res", type=str, default='512', choices=['256','512'])
-    parser.add_argument("--remove_artifacts", action='store_true')
+    parser.add_argument("--remove_artifacts", action='store_true') 
+    parser.add_argument("--no_watermark", action='store_true')
+    parser.add_argument("--vox", action='store_true')
+
     args = parser.parse_args()
+
+    if args.vox:
+        args.res = '224'
 
     run_single(args)
 

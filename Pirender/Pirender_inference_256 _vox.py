@@ -87,7 +87,7 @@ def generate_expression_params(pose_path, output_path):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Inference for demo")
-    parser.add_argument("--renderer_checkpoint", type=str, default="Pirender/checkpoints/renderer_checkpoint_256.pt")
+    parser.add_argument("--renderer_checkpoint", type=str, default="Pirender/checkpoints/renderer_checkpoint_256_vox.pt")
     parser.add_argument("--pose_path", type=str, required=True)
     parser.add_argument("--src_img_path", type=str, required=True)
     parser.add_argument("--wav_path", type=str, required=True)

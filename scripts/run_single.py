@@ -88,8 +88,17 @@ def run_single(args):
     CMT_time = time.time() - start_time
     start_time = time.time()
 
+
+
+
     print("rendering video")
-    if args.res=="512":
+    if args.res=='224':
+        os.system(f"mv {output_path}/ff.png {output_path}/ff_old.png")
+        os.system(f"ffmpeg -y -i {output_path}/ff_old.png -vf \"scale=256:256\" {output_path}/ff.png -loglevel error -hide_banner")
+        os.system(f"rm {output_path}/ff_old.png")
+        os.system(f"python Pirender/Pirender_inference_256_vox.py --pose_path {output_dmm_path} --src_img_path {png_path} --wav_path {audio_path} --output_path {output_path}/Dimitra_output.mp4")
+
+    elif args.res=="512":
         os.system(f"python Pirender/Pirender_inference_512.py --pose_path {output_dmm_path} --src_img_path {png_path} --wav_path {audio_path} --output_path {output_path}/Dimitra_output.mp4")
     else:
         os.system(f"python Pirender/Pirender_inference_256.py --pose_path {output_dmm_path} --src_img_path {png_path} --wav_path {audio_path} --output_path {output_path}/Dimitra_output.mp4")
@@ -104,6 +113,20 @@ def run_single(args):
         else:
             os.system(f"python RestoreFormer++/inference_loop.py --videos_path {output_path} --name 01 -v RestoreFormer++ -s 2 --save --single")
         restore_time = time.time() - start_time
+
+    if not args.no_watermark:
+        #ADD watermarks
+        os.system(f"mv {output_path}/Dimitra_output.mp4 {output_path}/Dimitra_output_old.mp4")
+        if args.res=="512":
+            os.system(f"ffmpeg -y -i {output_path}/Dimitra_output_old.mp4 -i images/watermark_512.png -filter_complex \"overlay=0:0\" {output_path}/Dimitra_output.mp4 -loglevel error -hide_banner")
+        else:
+            os.system(f"ffmpeg -y -i {output_path}/Dimitra_output_old.mp4 -i images/watermark_256.png -filter_complex \"overlay=0:0\" {output_path}/Dimitra_output.mp4 -loglevel error -hide_banner")
+        os.system(f"rm {output_path}/Dimitra_output_old.mp4")
+        if args.remove_artifacts:
+            os.system(f"mv {output_path}/Dimitra_output_cleaned.mp4 {output_path}/Dimitra_output_cleaned_old.mp4")
+            os.system(f"ffmpeg -y -i {output_path}/Dimitra_output_cleaned_old.mp4 -i images/watermark_512.png -filter_complex \"overlay=0:0\" {output_path}/Dimitra_output_cleaned.mp4 -loglevel error -hide_banner")
+            os.system(f"rm {output_path}/Dimitra_output_cleaned_old.mp4")
+
 
     total_time = time.time() - global_start_time
 
@@ -127,7 +150,11 @@ def main():
     parser.add_argument("--output_dir", type=str, default='output_single')
     parser.add_argument("--res", type=str, default='512', choices=['256','512'])
     parser.add_argument("--remove_artifacts", action='store_true')
+    parser.add_argument("--no_watermark", action='store_true')
+    parser.add_argument("--vox", action='store_true')
     args = parser.parse_args()
+    if args.vox:
+        args.res = '224'
 
     run_single(args)
 
